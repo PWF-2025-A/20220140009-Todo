@@ -83,8 +83,8 @@
                 {{ __('Todo') }}
             </x-responsive-nav-link>
 
-            <x-responsive-nav-link :href="route('todo.index')" :active="request()->routeIs('todo.index')">
-                {{ __('Profile') }}
+            <x-responsive-nav-link :href="route('user.index')" :active="request()->routeIs('user.index')">
+                {{ __('User') }}
             </x-responsive-nav-link>
         </div>
 
