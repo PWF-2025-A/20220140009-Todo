@@ -9,7 +9,7 @@
 
 ## 3. User Search
 
-![Screenshot_2025-04-25_184310](https://github.com/user-attachments/assets/9563bb59-8061-40f3-9d00-80dfae907c22)
+![Screenshot_2025-04-25_190543](https://github.com/user-attachments/assets/226594f1-0bec-42db-aed1-5b81649a2b86)
 
 
 ## User Search Result
