@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TodoController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CategoryController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -40,5 +41,16 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::patch('/user/{user}/removeadmin', [UserController::class, 'removeadmin']) -> name ('user.removeadmin');
     Route::delete('/user/{user}', [UserController::class, 'destroy']) -> name ('user.destroy');
 });
+
+Route::get('/categories', [CategoryController::class, 'index']) -> name ('categories.index');
+Route::get('/categories/create', [CategoryController::class, 'create']) -> name ('categories.create');
+Route::get('/categories/{category}/edit', [CategoryController::class, 'edit']) -> name ('categories.edit');
+Route::patch('/categories/{category}', [CategoryController::class, 'update']) -> name ('categories.update');
+Route::delete('/categoris/{category}', [CategoryController::class, 'destroy']) -> name ('categories.destroy');
+
+Route::resource('categories', CategoryController::class)->except(['show']);
+
+
+
 
 require __DIR__.'/auth.php';

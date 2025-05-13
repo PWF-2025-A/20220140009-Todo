@@ -39,6 +39,7 @@
                         <thead class="text-sm text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                             <tr>
                                 <th scope="col" class="px-6 py-3">Title</th>
+                                <th scope="col" class="px-6 py-3">Category</th>
                                 <th scope="col" class="px-6 py-3">Status</th>
                                 <th scope="col" class="px-6 py-3">Action</th>
                             </tr>
@@ -51,6 +52,12 @@
                                             {{ $data->title }}
                                         </a>
                                     </td>
+                                    <td class="px-6 py-4">
+                                        @if ($data->category)
+                                            {{ $data->category->title }}
+                                        @else
+                                            <span class="text-gray-500 dark:text-gray-400">No Category</span>
+                                        @endif
                                     <td class="px-6 py-4">
                                         @if ($data->is_done == false)
                                             <span class="inline-flex items-center bg-red-100 text-red-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-red-900 dark:text-red-300">
